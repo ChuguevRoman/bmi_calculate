@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/input_page_screen.dart';
+
 void main() => runApp(BMICalculate());
 
 class BMICalculate extends StatelessWidget {
@@ -14,24 +16,3 @@ class BMICalculate extends StatelessWidget {
   }
 }
 
-class InputPage extends StatefulWidget {
-  const InputPage({Key? key}) : super(key: key);
-
-  @override
-  State<InputPage> createState() => _InputPageState();
-}
-
-class _InputPageState extends State<InputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('BMI Calculator'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text('Hello'),
-      ),
-    );
-  }
-}
