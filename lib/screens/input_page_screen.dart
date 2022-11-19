@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/changeable_card.dart';
+
 class InputPage extends StatefulWidget {
   const InputPage({Key? key}) : super(key: key);
 
@@ -15,9 +17,24 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI Calculator'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text('Hello'),
+      body: Column(
+        children: [
+          Expanded(child: Row(
+            children: const [
+              Expanded(child: ChangeableCard()),
+              Expanded(child: ChangeableCard()),
+            ],
+          ),),
+          Expanded(child: ChangeableCard()),
+          Expanded(child: Row(
+            children: [
+              Expanded(child: ChangeableCard()),
+              Expanded(child: ChangeableCard()),
+            ],
+          ),),
+        ],
       ),
-    );
+      );
+
   }
 }
