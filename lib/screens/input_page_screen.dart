@@ -19,22 +19,25 @@ class _InputPageState extends State<InputPage> {
       ),
       body: Column(
         children: [
-          Expanded(child: Row(
-            children: const [
-              Expanded(child: ChangeableCard()),
-              Expanded(child: ChangeableCard()),
-            ],
-          ),),
+          Expanded(
+            child: Row(
+              children: const [
+                Expanded(child: ChangeableCard()),
+                Expanded(child: ChangeableCard()),
+              ],
+            ),
+          ),
           Expanded(child: ChangeableCard()),
-          Expanded(child: Row(
-            children: [
-              Expanded(child: ChangeableCard()),
-              Expanded(child: ChangeableCard()),
-            ],
-          ),),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(child: ChangeableCard()),
+                Expanded(child: ChangeableCard()),
+              ],
+            ),
+          ),
         ],
       ),
-      );
-
+    );
   }
 }

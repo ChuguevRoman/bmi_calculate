@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class ChangeableCard extends StatelessWidget {
-  const ChangeableCard({Key? key}) : super(key: key);
+
+  const ChangeableCard({this.color = kActiveColor});
+
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class ChangeableCard extends StatelessWidget {
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
-        color: kCardColor,
+        color: color,
       ),
     );
   }
