@@ -1,3 +1,4 @@
+import 'package:bmi_calculate_git/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/changeable_card.dart';
@@ -35,6 +36,13 @@ class _InputPageState extends State<InputPage> {
                 Expanded(child: ChangeableCard()),
               ],
             ),
+          ),
+          Container(
+            width: double.infinity,
+            height: kHeightBottomButton,
+            margin: EdgeInsets.only(top: 10.0),
+            color: kBottomButtonColor,
+
           ),
         ],
       ),
