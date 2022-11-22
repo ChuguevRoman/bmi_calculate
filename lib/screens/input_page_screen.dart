@@ -5,6 +5,11 @@ import '/constants.dart';
 import '../widgets/icon_content.dart';
 import '../widgets/changeable_card.dart';
 
+enum Gender {
+  male,
+  female,
+}
+
 class InputPage extends StatefulWidget {
   const InputPage({Key? key}) : super(key: key);
 
@@ -13,6 +18,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Gender? selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,20 +31,40 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(
             child: Row(
-              children: const [
+              children: [
                 Expanded(
-                  child: ChangeableCard(
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'Male',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
+                    },
+                    child: ChangeableCard(
+                      color: selectedGender == Gender.male
+                          ? kActiveColor
+                          : kInActiveColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'Male',
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: ChangeableCard(
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'Female',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedGender = Gender.female;
+                      });
+                    },
+                    child: ChangeableCard(
+                      color: selectedGender == Gender.female
+                          ? kActiveColor
+                          : kInActiveColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'Female',
+                      ),
                     ),
                   ),
                 ),
