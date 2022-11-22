@@ -1,6 +1,8 @@
-import 'package:bmi_calculate_git/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '/constants.dart';
+import '../widgets/icon_content.dart';
 import '../widgets/changeable_card.dart';
 
 class InputPage extends StatefulWidget {
@@ -23,8 +25,22 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: const [
-                Expanded(child: ChangeableCard()),
-                Expanded(child: ChangeableCard()),
+                Expanded(
+                  child: ChangeableCard(
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'Male',
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ChangeableCard(
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'Female',
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -42,7 +58,6 @@ class _InputPageState extends State<InputPage> {
             height: kHeightBottomButton,
             margin: EdgeInsets.only(top: 10.0),
             color: kBottomButtonColor,
-
           ),
         ],
       ),
