@@ -4,9 +4,10 @@ import '../constants.dart';
 
 class ChangeableCard extends StatelessWidget {
 
-  const ChangeableCard({this.color = kActiveColor});
+  const ChangeableCard({this.color = kActiveColor, this.cardChild});
 
   final Color color;
+  final Widget? cardChild;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,7 @@ class ChangeableCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
         color: color,
       ),
+      child: cardChild,
     );
   }
 }
