@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import '../widgets/changeable_card.dart';
+import '../widgets/bottom_button.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({Key? key}) : super(key: key);
@@ -28,18 +29,35 @@ class ResultScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-              flex: 5,
-              child: ChangeableCard(
-                cardChild: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text('Normal', style: kResultTextStyle,),
-                    Text('29.9', style: kBMITextStyle,),
-                    Text('Normal fhjg sgae wgerg wgwreg qegq qfeq3gf qe4fq43 q3f', style: kBodyTextStyle, textAlign: TextAlign.center,),
-                  ],
+            flex: 5,
+            child: ChangeableCard(
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Normal',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    '29.9',
+                    style: kBMITextStyle,
+                  ),
+                  Text(
+                    'Normal fhjg sgae wgerg wgwreg qegq qfeq3gf qe4fq43 q3f',
+                    style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
-          )),
+          ),
+          BottomButton(
+            text: 'RE - CALCULATE',
+            onPress: () {
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );
