@@ -9,6 +9,7 @@ const kMainColor = Color(0xFF0A0E21);
 const kActiveColor = Color(0xFF1D1E33);
 const kInActiveColor = Color(0xFF111328);
 const kBottomButtonColor = Color(0xFFEB1555);
+const kRoundIconButtonColor = Color(0xFF4C4F5E);
 
 //TextStyle
 const kLabelStyle = TextStyle(
