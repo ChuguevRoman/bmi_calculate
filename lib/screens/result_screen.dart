@@ -5,7 +5,12 @@ import '../widgets/changeable_card.dart';
 import '../widgets/bottom_button.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({Key? key}) : super(key: key);
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
+  const ResultScreen({super.key, required this.bmiResult, required this.resultText, required this.interpretation});
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +41,15 @@ class ResultScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Normal',
+                    resultText,
                     style: kResultTextStyle,
                   ),
                   Text(
-                    '29.9',
+                    bmiResult.toUpperCase(),
                     style: kBMITextStyle,
                   ),
                   Text(
-                    'Normal fhjg sgae wgerg wgwreg qegq qfeq3gf qe4fq43 q3f',
+                    interpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
